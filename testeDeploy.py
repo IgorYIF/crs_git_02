@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # brew install gh
 # github key:   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
-
+# github key2:  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
 # Injetando CSS para fazer o dashboard ocupar toda a tela
 st.markdown(
 	"""
@@ -136,7 +136,7 @@ if st.session_state.carregar :
 	github_stats = {}
 	
 	for linguagem in ['python', 'javascript', 'java', 'c', 'c#', 'typescript', 'c++', 'php']:
-		response = requests.get(f"https://api.github.com/search/repositories?q=language:{linguagem}", headers={"Authorization": "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"})
+		response = requests.get(f"https://api.github.com/search/repositories?q=language:{linguagem}", headers={"Authorization": "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"})
 		if response.status_code == 200:
 			github_data = response.json()
 			total_count = github_data.get('total_count', 0)
